@@ -193,7 +193,7 @@
 									Do you sometimes have the feeling that you’re running into the same obstacles over and over again? Many of my conflicts.
 								</p>
 							</div>
-						</div>  -->
+						</div>  
 						<div class="col-lg-4 col-md-6">
 							<div class="single-services">
 								<span class="lnr lnr-rocket"></span>
@@ -668,7 +668,13 @@ form {
 </form>
 			<!-- start footer Area -->
 		
-
+<div class="cookie_notice">
+Этот сайт использует cookie-файлы в соответствии с требованиями Российского Федерального закона от 27.07.2006. №152-ФЗ «О персональных данных». Для использования сайта Вам нужнор согласиться.
+    <div>
+        <a class="cookie_btn" id="cookie_close" href="#close">Согласиться</a>
+        <a class="cookie_btn" href="policy.pdf">Политика конфиденциальности</a>
+    </div>
+</div>
             <footer class="footer-area section-gap">
                 <div class="container">
                     <div class="row">
@@ -677,29 +683,21 @@ form {
                                 <h4>Про меня</h4>
                              	<p>
 				</p>
+				    
                                 <p class="footer-text">
 Copyright &copy; Andrey Gorbokon, 2020-2021-2022</p>
                             </div>
                         </div>
-                        <!-- <div class="col-lg-5 col-md-6 col-sm-6">
+                         <div class="col-lg-5 col-md-6 col-sm-6">
                             <div class="single-footer-widget">
-                                <h4>Newsletter</h4>
-                                <p>Stay updated with our latest trends</p>
-								<div class="" id="mc_embed_signup">
-									 <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get">
-									  <div class="input-group">
-									    <input type="text" class="form-control" name="EMAIL" placeholder="Enter Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email Address '" required="" type="email">
-									    <div class="input-group-btn">
-									      <button class="btn btn-default" type="submit">
-									        <span class="lnr lnr-arrow-right"></span>
-									      </button>    
-									    </div>
-									    	<div class="info"></div>  
-									  </div>
-									</form> 
-								</div>
+				    <h4>Поделится</h4>
+				    <script src="https://yastatic.net/share2/share.js"></script>
+<div class="ya-share2" data-curtain data-shape="round" data-services="telegram,vkontakte,facebook,twitter,viber,whatsapp,reddit,messenger"></div>
+				    <p>*Блок создан с помощью генератора <a href="https://yandex.ru/dev/share/">>«Яндекс»</a></p>
+				    <h4>Правовые документы</h4>
+				    <p>Этот сайт действует по законам РФ. <a href="policy.pdf"></a></p>
                             </div>
-                        </div> -->
+                        </div> 
                         <!-- <div class="col-lg-2 col-md-6 col-sm-6 social-widget">
                             <div class="single-footer-widget"> -->
 								 <!--<h4 class="text-white">Контакты</h4> -->
@@ -736,6 +734,79 @@ Copyright &copy; Andrey Gorbokon, 2020-2021-2022</p>
 			<script src="js/simple-skillbar.js"></script>							
 			<script src="js/owl.carousel.min.js"></script>							
 			<script src="js/mail-script.js"></script>	
-			<script src="js/main.js"></script>	
+			<script src="js/main.js"></script>
+ <style>
+	       .cookie_notice {
+    display: none;
+    position: fixed;
+    z-index: 9999999;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 15px;
+    font-family: Verdana, sans-serif;  
+    color: #FFF;
+    background: #4891e3;
+    padding: 10px 20px; 
+    border-top: 4px solid #BFE2FF;
+}
+/* Оформление кнопок */
+.cookie_btn {
+    display: inline-block;
+    margin: 10px 6px 4px 6px;
+    text-decoration: none;
+    position: relative;
+    font-size: 13px;
+    padding: 4px 12px;
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase; 
+    background: #4891e3;
+    border: 2px solid #BFE2FF;
+}
+.cookie_btn:hover {
+    color: #FFF;
+}
+.cookie_btn:after,
+.cookie_btn:before {
+    position: absolute;
+    height: 2px;
+    left: 50%;
+    background: #FFF;
+    bottom: -6px;
+    content: "";
+    transition: all 280ms ease-in-out;
+    width: 0;
+}
+.cookie_btn:before {
+    top: -6px;
+}
+.cookie_btn:hover:after,
+.cookie_btn:hover:before {
+    width: 100%;
+    left: 0;
+}
+      </style>
+   <script>
+function getCookie(name) {
+    let matches = document.cookie.match(new RegExp(
+    "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+let cookiecook = getCookie("cookiecook"),
+cookiewin = document.getElementsByClassName('cookie_notice')[0];    
+if (cookiecook != "no") {
+    cookiewin.style.display="block"; 
+    document.getElementById("cookie_close").addEventListener("click", function(){
+        cookiewin.style.display="none";    
+        let date = new Date;
+        date.setDate(date.getDate() + 1);    
+        document.cookie = "cookiecook=no; path=/; expires=" + date.toUTCString();               
+    });
+}
+</script>
+
 		</body>
 	</html>
